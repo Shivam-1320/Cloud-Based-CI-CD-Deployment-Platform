@@ -1,0 +1,27 @@
+{
+  "name": "cloud-based-ci-cd-deployment-platform",
+  "version": "1.0.0",
+  "description": "Production-ready CI/CD platform using AWS EC2, Docker, Nginx, GitHub Actions, SSL, and automated deployments.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shivam-1320/Cloud-Based-CI-CD-Deployment-Platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Shivam-1320/Cloud-Based-CI-CD-Deployment-Platform/issues"
+  },
+  "homepage": "https://github.com/Shivam-1320/Cloud-Based-CI-CD-Deployment-Platform#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
