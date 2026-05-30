@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Deploy to Azure
 
 on:
   push:
@@ -6,34 +6,30 @@ on:
       - main
 
 jobs:
-
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Build Docker Image
-        run: |
-          docker build -t cicd-app:test .
+      - name: Deploy to Azure VM
+        uses: appleboy/ssh-action@v1.2.0
 
-      - name: Start Container
-        run: |
-          docker run -d -p 3000:3000 --name test-container cicd-app:test
+        with:
+          host: ${{ secrets.AZURE_HOST }}
+          username: ${{ secrets.AZURE_USER }}
+          key: ${{ secrets.AZURE_SSH_KEY }}
 
-      - name: Wait For Application
-        run: |
-          sleep 10
+          script: |
+            cd ~/Cloud-Based-CI-CD-Deployment-Platform
 
-      - name: Health Check
-        run: |
-          curl --fail http://localhost:3000/health
+            git pull origin main
 
-      - name: Cleanup
-        if: always()
-        run: |
-          docker stop test-container
-          docker rm test-container
+            docker compose up -d --build
+
+            sleep 10
+
+            curl --fail http://localhost/health
+
+            echo "Deployment successful"
