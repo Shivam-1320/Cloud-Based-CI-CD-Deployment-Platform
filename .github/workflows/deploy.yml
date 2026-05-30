@@ -20,6 +20,20 @@ jobs:
         run: |
           docker build -t cicd-app:test .
 
-      - name: Verify Build
+      - name: Start Container
         run: |
-          docker images
+          docker run -d -p 3000:3000 --name test-container cicd-app:test
+
+      - name: Wait For Application
+        run: |
+          sleep 10
+
+      - name: Health Check
+        run: |
+          curl --fail http://localhost:3000/health
+
+      - name: Cleanup
+        if: always()
+        run: |
+          docker stop test-container
+          docker rm test-container
