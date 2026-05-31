@@ -158,22 +158,22 @@ The CI/CD pipeline performs the following steps automatically:
 
 ### GitHub Repository
 
-![Repository](images/github-repository.png)
+![GitHub Repository](Images/Github-Repository.png)
 
 ### GitHub Actions Workflow
 
-![GitHub Actions](images/github-actions-success.png)
-### Azure Virtual Machine
+![GitHub Actions](Images/Github-Action.png)
 
-![Azure VM](images/Azure-Virtual-Machine.png)
+### Azure Virtual Machine
+![Azure VM](Images/Azure-Virtual-Machine.png)
 
 ### Docker Containers
 
-![Docker Containers](images/docker-ps.png)
+![Docker Containers](Images/Docker-Containers.png)
 
 ### Running Application
 
-![Application](images/application-running.png)
+![Running Application](Images/Running-Application.png)
 
 ---
 
