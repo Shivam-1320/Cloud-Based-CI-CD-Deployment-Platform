@@ -1,5 +1,26 @@
-#  Production Web Application CI/CD Platform
+<img src="https://avatars.githubusercontent.com/u/101424800?v=4" width="80" align="left" />
 
+**Production Web Application CI/CD Platform**
+
+
+![GitHub Actions](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
+![Docker](https://img.shields.io/badge/Containerized-Docker-2496ED?logo=docker&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Orchestration-Docker%20Compose-2496ED?logo=docker&logoColor=white)
+![Node.js](https://img.shields.io/badge/Application-Node.js-339933?logo=node.js&logoColor=white)
+![Nginx](https://img.shields.io/badge/Reverse%20Proxy-Nginx-009639?logo=nginx&logoColor=white)
+![Azure VM](https://img.shields.io/badge/Hosted%20On-Azure%20VM-0078D4?logo=microsoftazure&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/OS-Ubuntu-E95420?logo=ubuntu&logoColor=white)
+![SSH Deployment](https://img.shields.io/badge/Deployment-SSH-success)
+![Linux](https://img.shields.io/badge/Linux-Administration-FCC624?logo=linux&logoColor=black)
+![Built in](https://img.shields.io/badge/Built%20in-Bash-0891b)
+![Repo](https://img.shields.io/badge/GitHub-shivam--1320-blue?logo=github)
+![Downloads](https://img.shields.io/badge/Telegram-purple?link=https%3A%2F%2Ft.me%2FShivam_baghel1320)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+
+#
+
+> **GitHub:**  shivam-1320
 ##  Overview
 
 This project demonstrates a complete CI/CD pipeline for deploying a containerized Node.js application to an Azure Ubuntu Virtual Machine using GitHub Actions, Docker Compose, and Nginx Reverse Proxy.
@@ -7,6 +28,7 @@ This project demonstrates a complete CI/CD pipeline for deploying a containerize
 When code is pushed to the GitHub repository, GitHub Actions automatically deploys the latest version of the application to the Azure VM via SSH.
 
 ##  Architecture Diagram
+
 
 ![Architecture Diagram](Images/Architecture-Diagram.png)
 
@@ -105,13 +127,13 @@ Node.js Application
 
 ---
 
-## ⚙️ Deployment Process
+##  Deployment Process
 
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-cd YOUR_REPOSITORY
+git clone https://github.com/Shivam-1320/Cloud-Based-CI-CD-Deployment-Platform.git
+cd Cloud-Based-CI-CD-Deployment-Platform
 ```
 
 ### 2. Build Containers
@@ -150,7 +172,8 @@ The CI/CD pipeline performs the following steps automatically:
 4. Latest code is pulled from the repository.
 5. Docker image is rebuilt.
 6. Docker Compose recreates containers.
-7. Application is deployed successfully.
+7. Application health check is performed.
+8. Deployment is marked successful.
 
 ---
 
@@ -191,15 +214,6 @@ http://20.xx.xx.xx
 
 ---
 
-##  Environment Variables
-
-Example `.env` file:
-
-```env
-PORT=3000
-NODE_ENV=production
-```
-
 ---
 
 ##  Skills Demonstrated
@@ -221,15 +235,21 @@ NODE_ENV=production
 * HTTPS using Let's Encrypt
 * Domain Name Integration
 * Docker Registry Integration
-* Health Checks
 * Monitoring with Prometheus
 * Grafana Dashboards
 * Blue-Green Deployment Strategy
+* Rollback feature 
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
 
 ---
 
 ## 👨‍💻 Author
 
-**Pankaj**
+**Pankaj Baghel**
 
-Currently learning AWS, DevOps, Cloud Infrastructure, and Automation.
+GitHub: https://github.com/shivam-1320
