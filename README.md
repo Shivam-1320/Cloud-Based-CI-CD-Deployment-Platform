@@ -33,6 +33,25 @@ When code is pushed to the GitHub repository, GitHub Actions automatically deplo
 ![Architecture Diagram](Images/Architecture-Diagram.png)
 
 ---
+```md
+ ## Note About HTTP Usage
+
+This project currently uses HTTP (Port 80) instead of HTTPS.
+
+The primary objective of this project is to demonstrate:
+
+- GitHub Actions CI/CD automation
+- Docker containerization
+- Docker Compose orchestration
+- Nginx reverse proxy configuration
+- Automated deployment to Azure Virtual Machine
+- Health check validation after deployment
+
+Since no custom domain name is configured for this project, SSL/TLS certificates have not been implemented.
+
+In a production environment, HTTPS would be enabled using a domain name and Let's Encrypt SSL certificates.
+```
+
 
 ##  CI/CD Workflow
 
@@ -51,8 +70,11 @@ GitHub Actions CI/CD
     ▼
 Azure Ubuntu VM
     │
-    ├── Docker Engine
-    ├── Docker Compose
+    ├── Pull Latest Code
+    ├── Docker Compose Build
+    ├── Recreate Containers
+    ├── Health Check (/health)
+    │
     ├── Nginx Reverse Proxy (Port 80)
     └── Node.js Application Container (Port 3000)
 
@@ -91,16 +113,24 @@ Node.js Application
 │   └── workflows/
 │       └── deploy.yml
 │
-├── app/
-│   ├── package.json
-│   └── application source code
+├── Images/
+│   ├── Architecture-Diagram.png
+│   ├── Azure-Virtual-Machine.png
+│   ├── Docker-Containers.png
+│   ├── Github-Action.png
+│   ├── Github-Repository.png
+│   └── Running-Application.png
 │
 ├── nginx/
 │   └── nginx.conf
 │
 ├── scripts/
-│   └── deploy.sh
+│   ├── deploy.sh
+│   └── rollback.sh
 │
+├── server.js
+├── package.json
+├── package-lock.json
 ├── Dockerfile
 ├── docker-compose.yml
 ├── .env.example
