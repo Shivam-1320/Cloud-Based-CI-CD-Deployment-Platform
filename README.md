@@ -272,6 +272,12 @@ http://20.xx.xx.xx
 
 ---
 
+## Project Status
+
+This project was successfully deployed and tested on an Azure Ubuntu VM.
+
+The cloud infrastructure has since been decommissioned to avoid unnecessary cloud costs. The complete CI/CD workflow, deployment scripts, Docker configuration, and documentation remain available in this repository for demonstration and learning purposes.
+
 ## 📄 License
 
 This project is licensed under the MIT License.
