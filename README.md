@@ -8,7 +8,7 @@ When code is pushed to the GitHub repository, GitHub Actions automatically deplo
 
 ##  Architecture Diagram
 
-![Architecture Diagram](images/architecture-diagram.png)
+![Architecture Diagram](images/Architecture-Diagram.drawio)
 
 ---
 
@@ -158,23 +158,22 @@ The CI/CD pipeline performs the following steps automatically:
 
 ### GitHub Repository
 
-![Repository](images/github-repository.png)
+![GitHub Repository](Images/Github-Repository.png)
 
 ### GitHub Actions Workflow
 
-![GitHub Actions](images/github-actions-success.png)
+![GitHub Actions](Images/Github-Action.png)
 
 ### Azure Virtual Machine
-
-![Azure VM](images/azure-vm.png)
+![Azure VM](Images/Azure-Virtual-Machine.png)
 
 ### Docker Containers
 
-![Docker Containers](images/docker-ps.png)
+![Docker Containers](Images/Docker-Containers.png)
 
 ### Running Application
 
-![Application](images/application-running.png)
+![Running Application](Images/Running-Application.png)
 
 ---
 
