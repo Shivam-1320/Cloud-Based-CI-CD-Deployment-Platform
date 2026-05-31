@@ -8,7 +8,7 @@ When code is pushed to the GitHub repository, GitHub Actions automatically deplo
 
 ##  Architecture Diagram
 
-![Architecture Diagram](images/Architecture-Diagram.png)
+![Architecture Diagram](Images/Architecture-Diagram.png)
 
 ---
 
